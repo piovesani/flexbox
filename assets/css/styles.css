@@ -265,7 +265,6 @@ footer .margin-50{
 }
 
 .footer-menu{
-    width: inherit;
     display: flex;
 }
 
@@ -297,7 +296,6 @@ footer .margin-50{
 }
 
 .footer-area{
-    width: inherit;
     display: flex;
 }
 
