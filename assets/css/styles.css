@@ -17,6 +17,7 @@
 
 body{
     color: #000;
+    overflow-x: hidden;
 }
 
 .flex{
@@ -35,6 +36,7 @@ body{
 header{
     display: flex;
     justify-content: center;
+    align-items: center;
     height: var(--hv-header);
 }
 
@@ -64,6 +66,10 @@ nav a{
 nav .active a, nav a:hover{
     background-color: var(--bg-banner);;
     color: var(--white);
+}
+
+.menu-mobile{
+    display: none;
 }
 
 
@@ -157,6 +163,7 @@ nav .active a, nav a:hover{
 .section-geral{
     display: flex;
     justify-content: center;
+    margin-bottom: 80px;
 }
 
 .geral-first{
@@ -253,6 +260,10 @@ footer{
     justify-content: center;
 }
 
+footer .margin-50{
+    margin-top: -50px;
+}
+
 .footer-menu{
     width: inherit;
     display: flex;
@@ -305,4 +316,84 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 600px) and (max-width: 920px) {
+    header, .section-home, footer, .footer-area{
+        padding: 0 40px;
+    }
+
+    .section-geral{
+        padding: 0 20px;
+    }
+    .container{
+        width: 100vw;
+    }
+}
+
+@media (max-width: 599px){
+    header, .section-home, footer, .footer-area{
+        padding: 0 20px;
+    }
+
+    .container{
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header{
+        padding: 20px;
+        height: auto;
+    }
+
+    header .menu{
+        display: none;
+    }
+
+    header nav ul{
+        width: 100px;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        background-color: #ffffff;
+        width: 100%;
+        margin-top: 80px;
+    }
+
+    .menu-mobile{
+        flex: 1;
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: end;
+    }
+
+    .menu-mobile .line{
+        cursor: pointer;
+        width: 40px;
+        height: 6px;
+        margin: 6px 0;
+        background-color: var(--bg-banner);
+        
+    }
+
+    .details{
+        height: auto;
+        flex-direction: column;
+    }
+
+    .section-geral{
+        padding: 0 20px;
+    }
+
+    .footer-menu, .footer-area{
+        flex-direction: column;
+    }
 }
